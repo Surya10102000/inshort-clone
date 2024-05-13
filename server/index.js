@@ -13,12 +13,15 @@ const newsRoute = require('./routes/news')
 
 const connectionString = process.env.MONGO_URI
 
+app.use(cors());
+
 // route middleware
 app.use('/', newsRoute )
 
 connectDB(connectionString)
 
 cron.schedule('*/10 * * * *', storeNews)
+// storeNews()
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

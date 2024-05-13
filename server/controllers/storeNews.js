@@ -10,11 +10,12 @@ const storeNews = async () => {
             for (const item of feed.items) {
                 const existingNews = await News.findOne({ title: item.title });
                 if (!existingNews) {
+                    console.log(JSON.stringify(item))
                     await News.create({
                         title: item.title,
                         author: item.creator,
                         description: item.contentSnippet,
-                        url: item.guid,
+                        image_url: item.enclosure?.url,
                         timestamp: item.isoDate,
                         link: item.link,
                         publisher: item.creator,

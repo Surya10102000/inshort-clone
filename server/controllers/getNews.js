@@ -3,12 +3,11 @@ const News = require('../model/news')
 const getNews = async (req, res)=>{
     try {
         let data = await News.find({});
-        res.status(200).json(data)
+        return res.status(200).json(data)
     } catch (error) {
-        response.status(500).json( {msg : error.message})
+        console.log(error)
+        return res.status(500).json( {msg : error})
     }
 }
 
-module.exports = {
-    getNews
-}
+module.exports = getNews

@@ -17,8 +17,9 @@ const newsSchema = new mongoose.Schema({
     author : {
         type : String
     },
-    url : {
+    image_url : {
         type : String,
+        default : "noUrl"
     },
     timestamp : { type : Date, default : Date.now},
     
