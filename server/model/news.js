@@ -21,6 +21,15 @@ const newsSchema = new mongoose.Schema({
         type : String,
         default : "noUrl"
     },
+    category : {
+        type : String,
+        required : true
+    },
+    unixtimestamp : {
+        type : Number
+    },
+    pubDate : {type : String},
+
     timestamp : { type : Date, default : Date.now},
     
 });
