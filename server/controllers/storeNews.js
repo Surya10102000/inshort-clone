@@ -28,7 +28,6 @@ const storeNews = async () => {
             timestamp = new Date(timestampString).getTime() / 1000;
           }
 
-          console.log(item);
           await News.create({
             title: item.title,
             author: item.creator,
