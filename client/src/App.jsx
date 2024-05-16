@@ -5,7 +5,7 @@ import { categories } from "./default";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [newsCategory, setNewsCategory] = useState('most-recent')
+  const [newsCategory, setNewsCategory] = useState(null)
 
   return (
     <>

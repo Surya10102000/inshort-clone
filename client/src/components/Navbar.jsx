@@ -36,6 +36,10 @@ const cross = (
 
 const Navbar = ({ categories, setNewsCategory }) => {
 
+  const handleCategoryChange = (n) =>{
+    setNewsCategory(n)
+  }
+
   return (
     <div className="navbar bg-base-100 drop-shadow-sm shadow-black sticky top-0 z-10">
       {/* drawer */}

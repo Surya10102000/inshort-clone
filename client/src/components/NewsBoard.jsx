@@ -5,7 +5,7 @@ import axios from "axios";
 const NewsBoard = ({ newsCategory }) => {
   const [content, setContent] = useState([]);
   const [offset, setOffset] = useState(0);
-  const limit = 10;
+  const limit = 5;
 
   useEffect(() => {
     fetchData();
@@ -37,12 +37,12 @@ const NewsBoard = ({ newsCategory }) => {
               description={news.description}
               image_url={news.image_url}
               pubDate={news.pubDate}
-              key={news._id}
+              key={index}
             />
           );
         })}
       </div>
-      <button className="btn btn-active mt-4 mx-auto" onClick={handleLoadMore}>Load More</button>
+      <button className="btn btn-active mt-5 mx-auto" onClick={handleLoadMore}>Load More</button>
     </div>
   );
 };
