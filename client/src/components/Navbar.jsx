@@ -34,11 +34,7 @@ const cross = (
   </svg>
 );
 
-const Navbar = ({categories, setNewsCategory}) => {
-
-  const handleCategoryChange = (categoryName)=>{
-
-  }
+const Navbar = ({ categories, setNewsCategory }) => {
 
   return (
     <div className="navbar bg-base-100 drop-shadow-sm shadow-black sticky top-0 z-10">
@@ -56,31 +52,41 @@ const Navbar = ({categories, setNewsCategory}) => {
             htmlFor="my-drawer"
             aria-label="close sidebar"
             className="drawer-overlay"
-            ></label>
+          ></label>
 
           <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
             {/* Sidebar content here */}
             <button className="btn btn-square ml-60">
-            <label
-              htmlFor="my-drawer"
-              className="drawer-button  "
-              >
-              {cross}
-            </label>
+              <label htmlFor="my-drawer" className="drawer-button  ">
+                {cross}
+              </label>
             </button>
             {/* Side bar Option */}
-              <div className="text-base font-semibold text-center">Categories</div>
+            <div className="text-base font-semibold text-center">
+              Categories
+            </div>
             {categories.map((category, index) => (
-              
-              <li key={index} onClick={()=> handleCategoryChange(category.name) }>
-                <a>{category.name}</a>
+              <li
+                key={index}
+                onClick={() => handleCategoryChange(category.name)}
+              >
+                <label
+                  htmlFor="my-drawer"
+                  className="drawer-button"
+                  onClick={() => {
+                    console.log(category.name);
+                  }}
+                >
+                  {category.name}
+                </label>
               </li>
             ))}
-
           </ul>
         </div>
       </div>
-      <a className="font-bold ml-2 text-xl text-left ">sum <span className="text-red-600">News</span></a>
+      <a className="font-bold ml-2 text-xl text-left ">
+        sum <span className="text-red-600">News</span>
+      </a>
     </div>
   );
 };
