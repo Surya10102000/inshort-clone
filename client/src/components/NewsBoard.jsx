@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import Article from "./Article";
 import axios from "axios";
 
+const categoryNews = () =>{
+
+}
+
 const NewsBoard = ({ newsCategory }) => {
   const [content, setContent] = useState([]);
   const [offset, setOffset] = useState(0);
@@ -10,6 +14,8 @@ const NewsBoard = ({ newsCategory }) => {
   useEffect(() => {
     fetchData();
   }, [offset]);
+
+  
 
   const fetchData = async () => {
     try {
@@ -23,13 +29,15 @@ const NewsBoard = ({ newsCategory }) => {
     }
   };
 
+
+
   const handleLoadMore = () => {
     setOffset((prevOffset) => prevOffset + limit);
   };
 
   return (
-    <div className="mt-5 flex flex-col">
-      <div className="w-full flex flex-col gap-6 lg:gap-1 ">
+    <div className="mt-5 flex flex-col w-full">
+      <div className="container flex flex-col mx-auto gap-6 lg:gap-1 ">
         {content.map((news, index) => {
           return (
             <Article
