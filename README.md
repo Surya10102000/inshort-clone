@@ -1,4 +1,4 @@
-# sumNews
+# inshort-clone
 
 This is a full-stack News Aggregator application built using the MERN stack. The backend is developed with Express and MongoDB, while the frontend is developed with React. The application fetches news from various sources and categorizes them for easy access.
 
@@ -45,28 +45,10 @@ This is a full-stack News Aggregator application built using the MERN stack. The
 ```sh
 git clone https://github.com/yourusername/news-aggregator.git
 cd news-aggregator
+```
 
-Here's a README.md file for your GitHub repository:
 
-markdown
 
-# News Aggregator
-
-This is a full-stack News Aggregator application built using the MERN stack. The backend is developed with Express and MongoDB, while the frontend is developed with React. The application fetches news from various sources and categorizes them for easy access.
-
-## Features
-
-- Fetch and display news articles from various sources
-- Categorize news articles
-- Scheduled news updates using cron jobs
-- Real-time updates on the frontend
-
-## Technologies Used
-
-### Backend
-
-- Node.js
-- Express
 - MongoDB
 - Mongoose
 - Node-Cron
@@ -92,11 +74,8 @@ This is a full-stack News Aggregator application built using the MERN stack. The
 
 ### Installation
 
-1. Clone the repository
-
-```sh
-git clone https://github.com/yourusername/news-aggregator.git
-cd news-aggregator
+git clone https://github.com/yourusername/inshort-clone.git
+cd inshort-clone
 
     Install dependencies
 
